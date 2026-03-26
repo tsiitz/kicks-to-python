@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}MNT1 - Customer Maintenance{% endblock %}
+{% block transaction_id %}MNT1{% endblock %}
+{% block screen_title %}CUSTOMER MAINTENANCE{% endblock %}
+
+{% block content %}
+<form method="POST" action="{{ url_for('customer_maintenance') }}">
+    <input type="hidden" name="action" value="lookup">
+    
+    <div style="margin-bottom: 30px;">
+        <div class="form-group">
+            <label for="customer_number">CUSTOMER NUMBER:</label>
+            <input type="number" 
+                   id="customer_number" 
+                   name="customer_number" 
+                   maxlength="6"
+                   autofocus
+                   required>
+        </div>
+        
+        <div class="form-group">
+            <label for="action_code">ACTION CODE:</label>
+            <select id="action_code" name="action_code" required>
+                <option value="">Select...</option>
+                <option value="1">1 - ADD NEW CUSTOMER</option>
+                <option value="2">2 - CHANGE CUSTOMER</option>
+                <option value="3">3 - DELETE CUSTOMER</option>
+            </select>
+        </div>
+    </div>
+    
+    <!-- Help text -->
+    <div class="help-text">
+        <p><strong>Instructions:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 10px;">
+            <li>Enter the customer number you want to work with</li>
+            <li>Select an action code:</li>
+            <ul style="margin-left: 20px;">
+                <li><strong>1</strong> - Add a new customer (customer must not exist)</li>
+                <li><strong>2</strong> - Change existing customer information</li>
+                <li><strong>3</strong> - Delete an existing customer</li>
+            </ul>
+            <li>Press ENTER to continue to the detail screen</li>
+        </ul>
+    </div>
+    
+    <!-- Buttons -->
+    <div class="button-group">
+        <button type="submit">ENTER - CONTINUE</button>
+        <button type="button" onclick="window.location.href='{{ url_for('index') }}'">
+            PF3 - RETURN TO MENU
+        </button>
+    </div>
+</form>
+{% endblock %}
+
+{% block status %}
+Enter customer number and action code, then press ENTER | Press F3 to return to menu
+{% endblock %}

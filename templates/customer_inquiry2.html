@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}INQ2 - Customer Inquiry (Browse){% endblock %}
+{% block transaction_id %}INQ2{% endblock %}
+{% block screen_title %}CUSTOMER INQUIRY - BROWSE{% endblock %}
+
+{% block content %}
+<form method="POST" action="{{ url_for('customer_inquiry2') }}" id="inquiryForm">
+    <input type="hidden" name="action" id="action" value="search">
+    
+    <!-- Input section -->
+    <div style="margin-bottom: 30px;">
+        <div class="form-group">
+            <label for="customer_number">CUSTOMER NUMBER:</label>
+            <input type="number" 
+                   id="customer_number" 
+                   name="customer_number" 
+                   maxlength="6"
+                   value="{{ customer.customer_number if customer else '' }}"
+                   autofocus>
+        </div>
+    </div>
+    
+    <!-- Display customer data if found -->
+    {% if customer %}
+    <div style="border-top: 1px solid #00ff00; padding-top: 20px; margin-bottom: 20px;">
+        <div class="form-group">
+            <label>FIRST NAME:</label>
+            <input type="text" value="{{ customer.first_name }}" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label>LAST NAME:</label>
+            <input type="text" value="{{ customer.last_name }}" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label>ADDRESS:</label>
+            <input type="text" value="{{ customer.address }}" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label>CITY:</label>
+            <input type="text" value="{{ customer.city }}" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label>STATE:</label>
+            <input type="text" value="{{ customer.state }}" readonly style="width: 50px;">
+        </div>
+        
+        <div class="form-group">
+            <label>ZIP CODE:</label>
+            <input type="text" value="{{ customer.zip_code }}" readonly>
+        </div>
+    </div>
+    {% endif %}
+    
+    <!-- Help text -->
+    {% if not customer and not error %}
+    <div class="help-text">
+        <p>Enter a customer number and press ENTER, or:</p>
+        <ul style="margin-left: 20px; margin-top: 10px;">
+            <li>Press PF5 to display the first customer</li>
+            <li>Press PF6 to display the last customer</li>
+            <li>Press PF7 to display the previous customer</li>
+            <li>Press PF8 to display the next customer</li>
+        </ul>
+    </div>
+    {% endif %}
+    
+    <!-- Buttons -->
+    <div class="button-group">
+        <button type="submit" onclick="setAction('search')">
+            ENTER - SEARCH
+        </button>
+        <button type="submit" onclick="setAction('first')">
+            PF5 - FIRST
+        </button>
+        <button type="submit" onclick="setAction('last')">
+            PF6 - LAST
+        </button>
+        {% if customer %}
+        <button type="submit" onclick="setAction('prev')">
+            PF7 - PREVIOUS
+        </button>
+        <button type="submit" onclick="setAction('next')">
+            PF8 - NEXT
+        </button>
+        {% endif %}
+        <button type="button" onclick="window.location.href='{{ url_for('index') }}'">
+            PF12 - MENU
+        </button>
+    </div>
+</form>
+
+<script>
+function setAction(action) {
+    document.getElementById('action').value = action;
+}
+
+// PF Key shortcuts
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'F5') {
+        event.preventDefault();
+        setAction('first');
+        document.getElementById('inquiryForm').submit();
+    } else if (event.key === 'F6') {
+        event.preventDefault();
+        setAction('last');
+        document.getElementById('inquiryForm').submit();
+    } else if (event.key === 'F7') {
+        event.preventDefault();
+        setAction('prev');
+        document.getElementById('inquiryForm').submit();
+    } else if (event.key === 'F8') {
+        event.preventDefault();
+        setAction('next');
+        document.getElementById('inquiryForm').submit();
+    }
+});
+</script>
+{% endblock %}
+
+{% block status %}
+F5=First | F6=Last | F7=Prev | F8=Next | F12=Menu
+{% endblock %}

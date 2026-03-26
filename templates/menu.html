@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}MENU - Application Menu{% endblock %}
+{% block transaction_id %}MENU{% endblock %}
+{% block screen_title %}APPLICATION MENU{% endblock %}
+
+{% block content %}
+<form method="POST" action="">
+    <div style="margin-bottom: 30px;">
+        <p style="color: #00ffff; margin-bottom: 20px;">Select a transaction:</p>
+        
+        <div style="margin-left: 40px;">
+            <p style="margin-bottom: 15px;">
+                <a href="{{ url_for('customer_inquiry') }}" style="display: block; margin-bottom: 10px;">
+                    <strong>INQ1</strong> - Customer Inquiry (Basic)
+                </a>
+                <span class="help-text">Look up customer information by customer number</span>
+            </p>
+            
+            <p style="margin-bottom: 15px;">
+                <a href="{{ url_for('customer_inquiry2') }}" style="display: block; margin-bottom: 10px;">
+                    <strong>INQ2</strong> - Customer Inquiry (Browse)
+                </a>
+                <span class="help-text">Browse through customer records with PF5/PF6/PF7/PF8</span>
+            </p>
+            
+            <p style="margin-bottom: 15px;">
+                <a href="{{ url_for('customer_inquiry3') }}" style="display: block; margin-bottom: 10px;">
+                    <strong>INQ3</strong> - Customer Inquiry (With Invoices)
+                </a>
+                <span class="help-text">View customer information plus recent invoices</span>
+            </p>
+            
+            <p style="margin-bottom: 15px;">
+                <a href="{{ url_for('customer_maintenance') }}" style="display: block; margin-bottom: 10px;">
+                    <strong>MNT1</strong> - Customer Maintenance
+                </a>
+                <span class="help-text">Add, change, or delete customer records</span>
+            </p>
+            
+            <p style="margin-bottom: 15px;">
+                <a href="{{ url_for('customer_list') }}" style="display: block; margin-bottom: 10px;">
+                    <strong>LIST</strong> - Customer List Report
+                </a>
+                <span class="help-text">Display all customers on file</span>
+            </p>
+        </div>
+    </div>
+    
+    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #00ff00;">
+        <p style="color: #00ffff;">Sample Data:</p>
+        <p class="help-text">Customer Numbers: 400001, 400002, 400003, 400004, 400005, 400006, 400007</p>
+        <p class="help-text">Product Codes: 0000000001, 0000000005, 0000000010, 0000000020, 0000000025</p>
+    </div>
+</form>
+{% endblock %}
+
+{% block status %}Select a transaction from the menu | Press F3 to exit{% endblock %}

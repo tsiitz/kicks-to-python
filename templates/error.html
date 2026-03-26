@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}ERROR{% endblock %}
+{% block transaction_id %}ERROR{% endblock %}
+{% block screen_title %}SYSTEM ERROR{% endblock %}
+
+{% block content %}
+<div style="border: 2px solid #ff0000; padding: 20px; margin-bottom: 20px; background-color: #330000;">
+    <p style="color: #ff0000; font-size: 18px; margin-bottom: 15px;">
+        <strong>{{ error }}</strong>
+    </p>
+    
+    <p style="color: #ffaa00;">
+        {{ message }}
+    </p>
+</div>
+
+<div class="help-text">
+    <p>An error has occurred. Please try again or contact system support if the problem persists.</p>
+</div>
+
+<div class="button-group">
+    <button type="button" onclick="window.location.href='{{ url_for('index') }}'">
+        RETURN TO MENU
+    </button>
+    <button type="button" onclick="window.history.back()">
+        GO BACK
+    </button>
+</div>
+{% endblock %}
+
+{% block status %}
+System error occurred | Press ENTER to return to menu
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}LIST - Customer List{% endblock %}
+{% block transaction_id %}LIST{% endblock %}
+{% block screen_title %}CUSTOMER LIST REPORT{% endblock %}
+
+{% block content %}
+<div style="margin-bottom: 20px;">
+    <p style="color: #00ffff;">Total Customers: {{ customers|length }}</p>
+</div>
+
+{% if customers %}
+<table>
+    <thead>
+        <tr>
+            <th>CUSTOMER #</th>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>CITY</th>
+            <th>STATE</th>
+            <th>ZIP CODE</th>
+            <th>ACTIONS</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for customer in customers %}
+        <tr>
+            <td>{{ '%06d'|format(customer.customer_number) }}</td>
+            <td>{{ customer.first_name.strip() }}</td>
+            <td>{{ customer.last_name.strip() }}</td>
+            <td>{{ customer.city.strip() }}</td>
+            <td>{{ customer.state.strip() }}</td>
+            <td>{{ customer.zip_code.strip() }}</td>
+            <td>
+                <a href="{{ url_for('customer_inquiry', customer_number=customer.customer_number) }}">View</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p class="help-text">No customers found in database.</p>
+{% endif %}
+
+<div class="button-group">
+    <button type="button" onclick="window.location.href='{{ url_for('index') }}'">
+        PF3 - RETURN TO MENU
+    </button>
+    <button type="button" onclick="window.print()">
+        PRINT REPORT
+    </button>
+</div>
+{% endblock %}
+
+{% block status %}
+Displaying {{ customers|length }} customer records | Press F3 to return to menu
+{% endblock %}

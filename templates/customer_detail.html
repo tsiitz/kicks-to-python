@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}MNT1 - Customer Detail{% endblock %}
+{% block transaction_id %}MNT1{% endblock %}
+{% block screen_title %}
+{% if action == 'add' %}ADD NEW CUSTOMER{% elif action == 'change' %}CHANGE CUSTOMER{% else %}DELETE CUSTOMER{% endif %}
+{% endblock %}
+
+{% block content %}
+<form method="POST" action="{{ url_for('customer_maintenance') }}">
+    <input type="hidden" name="action" value="{{ action }}">
+    
+    <!-- Customer number (readonly) -->
+    <div style="margin-bottom: 30px;">
+        <div class="form-group">
+            <label>CUSTOMER NUMBER:</label>
+            <input type="text" 
+                   value="{{ customer.customer_number if customer else customer_number }}"
+                   readonly>
+        </div>
+    </div>
+    
+    <!-- Customer data fields -->
+    <div style="border-top: 1px solid #00ff00; padding-top: 20px; margin-bottom: 20px;">
+        <div class="form-group">
+            <label for="first_name">FIRST NAME:</label>
+            <input type="text" 
+                   id="first_name" 
+                   name="first_name" 
+                   maxlength="20"
+                   value="{{ customer.first_name.strip() if customer else '' }}"
+                   {% if action == 'delete' %}readonly{% else %}required{% endif %}
+                   {% if action != 'delete' %}autofocus{% endif %}>
+        </div>
+        
+        <div class="form-group">
+            <label for="last_name">LAST NAME:</label>
+            <input type="text" 
+                   id="last_name" 
+                   name="last_name" 
+                   maxlength="30"
+                   value="{{ customer.last_name.strip() if customer else '' }}"
+                   {% if action == 'delete' %}readonly{% else %}required{% endif %}>
+        </div>
+        
+        <div class="form-group">
+            <label for="address">ADDRESS:</label>
+            <input type="text" 
+                   id="address" 
+                   name="address" 
+                   maxlength="30"
+                   value="{{ customer.address.strip() if customer else '' }}"
+                   {% if action == 'delete' %}readonly{% endif %}>
+        </div>
+        
+        <div class="form-group">
+            <label for="city">CITY:</label>
+            <input type="text" 
+                   id="city" 
+                   name="city" 
+                   maxlength="20"
+                   value="{{ customer.city.strip() if customer else '' }}"
+                   {% if action == 'delete' %}readonly{% endif %}>
+        </div>
+        
+        <div class="form-group">
+            <label for="state">STATE:</label>
+            <input type="text" 
+                   id="state" 
+                   name="state" 
+                   maxlength="2"
+                   value="{{ customer.state.strip() if customer else '' }}"
+                   {% if action == 'delete' %}readonly{% endif %}
+                   style="width: 80px; text-transform: uppercase;">
+        </div>
+        
+        <div class="form-group">
+            <label for="zip_code">ZIP CODE:</label>
+            <input type="text" 
+                   id="zip_code" 
+                   name="zip_code" 
+                   maxlength="10"
+                   value="{{ customer.zip_code.strip() if customer else '' }}"
+                   {% if action == 'delete' %}readonly{% endif %}>
+        </div>
+    </div>
+    
+    <!-- Action-specific help text -->
+    <div class="help-text">
+        {% if action == 'add' %}
+        <p>Complete the form and press ENTER to add this customer.</p>
+        {% elif action == 'change' %}
+        <p>Make your changes and press ENTER to update the customer record.</p>
+        {% elif action == 'delete' %}
+        <p style="color: #ff0000;">Press ENTER to DELETE this customer. This cannot be undone!</p>
+        {% endif %}
+        <p>Press PF3 or PF12 to cancel and return to the main maintenance screen.</p>
+    </div>
+    
+    <!-- Buttons -->
+    <div class="button-group">
+        {% if action == 'add' %}
+        <button type="submit" style="background-color: #00ff00;">ENTER - ADD CUSTOMER</button>
+        {% elif action == 'change' %}
+        <button type="submit" style="background-color: #00ff00;">ENTER - UPDATE CUSTOMER</button>
+        {% elif action == 'delete' %}
+        <button type="submit" style="background-color: #ff0000; color: #ffffff;">ENTER - DELETE CUSTOMER</button>
+        {% endif %}
+        <button type="button" onclick="window.location.href='{{ url_for('customer_maintenance') }}'">
+            PF3 - CANCEL
+        </button>
+        <button type="button" onclick="window.location.href='{{ url_for('index') }}'">
+            PF12 - MENU
+        </button>
+    </div>
+</form>
+
+<script>
+// Auto-uppercase state field
+document.getElementById('state').addEventListener('input', function(e) {
+    e.target.value = e.target.value.toUpperCase();
+});
+</script>
+{% endblock %}
+
+{% block status %}
+{% if action == 'add' %}Enter customer information and press ENTER to add{% elif action == 'change' %}Update information and press ENTER to save changes{% else %}Press ENTER to confirm deletion{% endif %} | F3=Cancel | F12=Menu
+{% endblock %}

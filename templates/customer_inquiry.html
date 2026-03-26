@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}INQ1 - Customer Inquiry{% endblock %}
+{% block transaction_id %}INQ1{% endblock %}
+{% block screen_title %}CUSTOMER INQUIRY{% endblock %}
+
+{% block content %}
+<form method="POST" action="{{ url_for('customer_inquiry') }}">
+    <!-- Input section -->
+    <div style="margin-bottom: 30px;">
+        <div class="form-group">
+            <label for="customer_number">CUSTOMER NUMBER:</label>
+            <input type="number" 
+                   id="customer_number" 
+                   name="customer_number" 
+                   maxlength="6"
+                   value="{{ customer.customer_number if customer else customer_number|default('') }}"
+                   {% if customer %}readonly{% endif %}
+                   autofocus>
+        </div>
+    </div>
+    
+    <!-- Display customer data if found -->
+    {% if customer %}
+    <div style="border-top: 1px solid #00ff00; padding-top: 20px; margin-bottom: 20px;">
+        <div class="form-group">
+            <label>FIRST NAME:</label>
+            <input type="text" value="{{ customer.first_name }}" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label>LAST NAME:</label>
+            <input type="text" value="{{ customer.last_name }}" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label>ADDRESS:</label>
+            <input type="text" value="{{ customer.address }}" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label>CITY:</label>
+            <input type="text" value="{{ customer.city }}" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label>STATE:</label>
+            <input type="text" value="{{ customer.state }}" readonly style="width: 50px;">
+        </div>
+        
+        <div class="form-group">
+            <label>ZIP CODE:</label>
+            <input type="text" value="{{ customer.zip_code }}" readonly>
+        </div>
+    </div>
+    {% endif %}
+    
+    <!-- Help text -->
+    {% if not customer and not error %}
+    <div class="help-text">
+        <p>Enter a 6-digit customer number and press ENTER to display customer information.</p>
+        <p>Sample customer numbers: 400001, 400002, 400003</p>
+    </div>
+    {% endif %}
+    
+    <!-- Buttons -->
+    <div class="button-group">
+        {% if not customer %}
+        <button type="submit">ENTER</button>
+        {% else %}
+        <button type="submit" onclick="window.location.href='{{ url_for('customer_inquiry') }}'; return false;">
+            PF3 - NEW INQUIRY
+        </button>
+        {% endif %}
+        <button type="button" onclick="window.location.href='{{ url_for('index') }}'">
+            PF12 - RETURN TO MENU
+        </button>
+    </div>
+</form>
+{% endblock %}
+
+{% block status %}
+{% if customer %}
+Customer {{ customer.customer_number }} displayed | Press ENTER for new inquiry | Press F3/F12 to exit
+{% else %}
+Enter customer number and press ENTER | Press F3/F12 to return to menu
+{% endif %}
+{% endblock %}
