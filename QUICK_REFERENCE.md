@@ -13,15 +13,15 @@ git commit -m "Initial commit: KICKS/COBOL to Python conversion"
 
 # 3. Create repo on GitHub.com (kicks-to-python, Public)
 
-# 4. Connect and push (replace YOUR-USERNAME)
-git remote add origin https://github.com/YOUR-USERNAME/kicks-to-python.git
+# 4. Connect and push (replace tsiitz)
+git remote add origin https://github.com/tsiitz/kicks-to-python.git
 git push -u origin main
 
 # 5. Enable GitHub Pages:
 #    GitHub.com → Settings → Pages → Source: main branch, /docs folder
 
 # 6. Update URLs in README.md and docs/index.md
-#    Replace YOUR-USERNAME with your actual username
+#    Replace tsiitz with your actual username
 
 # 7. Push updates
 git add .
@@ -33,8 +33,8 @@ git push
 
 After upload, your project will be at:
 
-- **Repository:** https://github.com/YOUR-USERNAME/kicks-to-python
-- **Documentation:** https://YOUR-USERNAME.github.io/kicks-to-python/
+- **Repository:** https://github.com/tsiitz/kicks-to-python
+- **Documentation:** https://tsiitz.github.io/kicks-to-python/
 - **Python App:** Clone and run `python app.py` → http://localhost:5000
 
 ## ✅ Verification Checklist

@@ -19,7 +19,7 @@ This project demonstrates the full conversion of **Doug Lowe's classic CICS samp
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR-USERNAME/kicks-to-python.git
+git clone https://github.com/tsiitz/kicks-to-python.git
 cd kicks-to-python
 
 # Install and run
@@ -37,13 +37,13 @@ python app.py
 
 ### Getting Started
 
-- [**Quick Start Guide**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/README.md#-quick-start) - Get running in 5 minutes
-- [**GitHub Upload Instructions**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/GITHUB_UPLOAD_INSTRUCTIONS.md) - Detailed setup instructions
-- [**Quick Reference**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/QUICK_REFERENCE.md) - Command cheat sheet
+- [**Quick Start Guide**](https://github.com/tsiitz/kicks-to-python/blob/main/README.md#-quick-start) - Get running in 5 minutes
+- [**GitHub Upload Instructions**](https://github.com/tsiitz/kicks-to-python/blob/main/GITHUB_UPLOAD_INSTRUCTIONS.md) - Detailed setup instructions
+- [**Quick Reference**](https://github.com/tsiitz/kicks-to-python/blob/main/QUICK_REFERENCE.md) - Command cheat sheet
 
 ### Conversion Guide
 
-- [**Complete Conversion Guide**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/KICKS_TO_PYTHON_CONVERSION_GUIDE.md) - Full 60+ page guide covering all patterns
+- [**Complete Conversion Guide**](https://github.com/tsiitz/kicks-to-python/blob/main/KICKS_TO_PYTHON_CONVERSION_GUIDE.md) - Full 60+ page guide covering all patterns
   - Architecture decisions
   - Data migration strategies (VSAM to SQL)
   - Program conversion patterns (COBOL to Python)
@@ -52,9 +52,9 @@ python app.py
 
 ### Reference
 
-- [**Python Application README**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/README.md) - Application documentation
-- [**COBOL Source Code README**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/cobol-source/README.md) - Original program documentation
-- [**GitHub Repository**](https://github.com/YOUR-USERNAME/kicks-to-python) - View all source code
+- [**Python Application README**](https://github.com/tsiitz/kicks-to-python/blob/main/README.md) - Application documentation
+- [**COBOL Source Code README**](https://github.com/tsiitz/kicks-to-python/blob/main/cobol-source/README.md) - Original program documentation
+- [**GitHub Repository**](https://github.com/tsiitz/kicks-to-python) - View all source code
 
 ---
 
@@ -175,24 +175,24 @@ customer = customer_repo.get_next(key)  # PF8
 
 If you're a CICS programmer looking to understand modern web development:
 
-1. **Start Here:** [Complete Conversion Guide](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/KICKS_TO_PYTHON_CONVERSION_GUIDE.md) - Full CICS to Python patterns
-2. **Then Read:** [Python Application Guide](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/README.md) - Understanding the converted app
+1. **Start Here:** [Complete Conversion Guide](https://github.com/tsiitz/kicks-to-python/blob/main/KICKS_TO_PYTHON_CONVERSION_GUIDE.md) - Full CICS to Python patterns
+2. **Then Read:** [Python Application Guide](https://github.com/tsiitz/kicks-to-python/blob/main/README.md) - Understanding the converted app
 3. **Practice With:** The working application - clone and run `python app.py`
 
 ### For Python Developers
 
 If you're a Python developer working with legacy systems:
 
-1. **Start Here:** [Complete Conversion Guide](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/KICKS_TO_PYTHON_CONVERSION_GUIDE.md) - Understand CICS concepts
-2. **Then Read:** [COBOL Source Documentation](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/cobol-source/README.md) - Original COBOL programs
+1. **Start Here:** [Complete Conversion Guide](https://github.com/tsiitz/kicks-to-python/blob/main/KICKS_TO_PYTHON_CONVERSION_GUIDE.md) - Understand CICS concepts
+2. **Then Read:** [COBOL Source Documentation](https://github.com/tsiitz/kicks-to-python/blob/main/cobol-source/README.md) - Original COBOL programs
 3. **Study:** Compare COBOL source with Python implementation
 
 ### For Everyone
 
-- [**Complete Conversion Guide**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/KICKS_TO_PYTHON_CONVERSION_GUIDE.md) - 60+ page comprehensive guide
-- [**Python Application README**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/README.md) - Quick start and features
-- [**COBOL Source Documentation**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/cobol-source/README.md) - Original programs reference
-- [**GitHub Upload Guide**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/GITHUB_UPLOAD_INSTRUCTIONS.md) - How to upload to GitHub
+- [**Complete Conversion Guide**](https://github.com/tsiitz/kicks-to-python/blob/main/KICKS_TO_PYTHON_CONVERSION_GUIDE.md) - 60+ page comprehensive guide
+- [**Python Application README**](https://github.com/tsiitz/kicks-to-python/blob/main/README.md) - Quick start and features
+- [**COBOL Source Documentation**](https://github.com/tsiitz/kicks-to-python/blob/main/cobol-source/README.md) - Original programs reference
+- [**GitHub Upload Guide**](https://github.com/tsiitz/kicks-to-python/blob/main/GITHUB_UPLOAD_INSTRUCTIONS.md) - How to upload to GitHub
 
 ---
 
@@ -290,16 +290,16 @@ We welcome contributions! Here's how you can help:
 - Create video tutorials
 
 ### Feedback
-- Report bugs via [GitHub Issues](https://github.com/YOUR-USERNAME/kicks-to-python/issues)
+- Report bugs via [GitHub Issues](https://github.com/tsiitz/kicks-to-python/issues)
 - Suggest improvements
 - Share your conversion experiences
-- Ask questions in [Discussions](https://github.com/YOUR-USERNAME/kicks-to-python/discussions)
+- Ask questions in [Discussions](https://github.com/tsiitz/kicks-to-python/discussions)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/tsiitz/kicks-to-python/blob/main/LICENSE) file for details.
 
 **Attribution:**
 - Original COBOL programs based on examples from "CICS for the COBOL Programmer" by Doug Lowe
@@ -338,7 +338,7 @@ If this project helps you, please give it a star on GitHub! ⭐
 
 It helps others discover this resource for mainframe modernization.
 
-[**⭐ Star on GitHub →**](https://github.com/YOUR-USERNAME/kicks-to-python)
+[**⭐ Star on GitHub →**](https://github.com/tsiitz/kicks-to-python)
 
 ---
 
@@ -346,14 +346,14 @@ It helps others discover this resource for mainframe modernization.
 
 ### Documentation
 - [Quick Start](#quick-start)
-- [Conversion Guide](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/KICKS_TO_PYTHON_CONVERSION_GUIDE.md)
+- [Conversion Guide](https://github.com/tsiitz/kicks-to-python/blob/main/KICKS_TO_PYTHON_CONVERSION_GUIDE.md)
 - [COBOL Reference](cobol-reference.html)
 - [API Documentation](api-reference.html)
 
 ### Resources
-- [GitHub Repository](https://github.com/YOUR-USERNAME/kicks-to-python)
-- [Report an Issue](https://github.com/YOUR-USERNAME/kicks-to-python/issues)
-- [View Source Code](https://github.com/YOUR-USERNAME/kicks-to-python)
+- [GitHub Repository](https://github.com/tsiitz/kicks-to-python)
+- [Report an Issue](https://github.com/tsiitz/kicks-to-python/issues)
+- [View Source Code](https://github.com/tsiitz/kicks-to-python)
 
 ### External Links
 - [KICKS for CMS & TSO](http://www.kicksfortso.com) - Mike Noel's KICKS website

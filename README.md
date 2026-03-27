@@ -9,7 +9,7 @@
 
 This repository demonstrates the full conversion of Doug Lowe's classic CICS sample application suite from KICKS/COBOL running on MVS 3.8J to a modern Python Flask web application with SQLite database.
 
-📚 **[View Documentation Site](https://YOUR-USERNAME.github.io/kicks-to-python/)** ← _Replace with your actual GitHub username after uploading_
+📚 **[View Documentation Site](https://tsiitz.github.io/kicks-to-python/)**
 
 ---
 
@@ -41,7 +41,7 @@ Thousands of enterprises still run critical business applications on mainframes 
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR-USERNAME/kicks-to-python.git
+git clone https://github.com/tsiitz/kicks-to-python.git
 cd kicks-to-python
 
 # Install dependencies
@@ -204,7 +204,7 @@ This repository includes extensive documentation:
 1. **[README.md](README.md)** - This file - Quick start and overview
 2. **[KICKS_TO_PYTHON_CONVERSION_GUIDE.md](KICKS_TO_PYTHON_CONVERSION_GUIDE.md)** - Comprehensive 60+ page conversion guide
 3. **[cobol-source/README.md](cobol-source/README.md)** - COBOL program documentation
-4. **[GitHub Pages Site](https://YOUR-USERNAME.github.io/kicks-to-python/)** - Beautiful documentation website
+4. **[GitHub Pages Site](https://tsiitz.github.io/kicks-to-python/)** - Beautiful documentation website
 
 ### What's in the Conversion Guide
 
@@ -294,6 +294,6 @@ It helps others discover this resource for mainframe modernization.
 
 **Made with ❤️ for the mainframe modernization community**
 
-[View Documentation](https://YOUR-USERNAME.github.io/kicks-to-python/) • [Report Bug](https://github.com/YOUR-USERNAME/kicks-to-python/issues) • [Request Feature](https://github.com/YOUR-USERNAME/kicks-to-python/issues)
+[View Documentation](https://tsiitz.github.io/kicks-to-python/) • [Report Bug](https://github.com/tsiitz/kicks-to-python/issues) • [Request Feature](https://github.com/tsiitz/kicks-to-python/issues)
 
 </div>

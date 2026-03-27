@@ -65,11 +65,11 @@ git commit -m "Initial commit: KICKS/COBOL to Python conversion"
 
 ### Step 4: Connect to GitHub
 
-**Replace `YOUR-USERNAME` with your actual GitHub username:**
+**Replace `tsiitz` with your actual GitHub username:**
 
 ```bash
 # Add remote repository
-git remote add origin https://github.com/YOUR-USERNAME/kicks-to-python.git
+git remote add origin https://github.com/tsiitz/kicks-to-python.git
 
 # Verify it's correct
 git remote -v
@@ -77,8 +77,8 @@ git remote -v
 
 **You should see:**
 ```
-origin  https://github.com/YOUR-USERNAME/kicks-to-python.git (fetch)
-origin  https://github.com/YOUR-USERNAME/kicks-to-python.git (push)
+origin  https://github.com/tsiitz/kicks-to-python.git (fetch)
+origin  https://github.com/tsiitz/kicks-to-python.git (push)
 ```
 
 ### Step 5: Push to GitHub
@@ -111,7 +111,7 @@ git push -u origin main
 
 **In your web browser:**
 
-1. **Go to your repository:** `https://github.com/YOUR-USERNAME/kicks-to-python`
+1. **Go to your repository:** `https://github.com/tsiitz/kicks-to-python`
 2. **Click "Settings"** (tab near the top)
 3. **Click "Pages"** (left sidebar)
 4. **Under "Source":**
@@ -125,7 +125,7 @@ git push -u origin main
 
 **Your GitHub Pages URL will be:**
 ```
-https://YOUR-USERNAME.github.io/kicks-to-python/
+https://tsiitz.github.io/kicks-to-python/
 ```
 
 ### Step 7: Update README with Your URL
@@ -133,7 +133,7 @@ https://YOUR-USERNAME.github.io/kicks-to-python/
 Now update the README files with your actual GitHub username:
 
 ```bash
-# Open README.md and replace YOUR-USERNAME with your actual username
+# Open README.md and replace tsiitz with your actual username
 # Do this in docs/index.md as well
 
 # Then commit and push the changes
@@ -227,18 +227,18 @@ After your repository is created, update these files with your GitHub username:
 2. `docs/index.md` - Multiple locations
 
 **Find and replace:**
-- Find: `YOUR-USERNAME`
+- Find: `tsiitz`
 - Replace: `your-actual-github-username`
 
 **Using command line:**
 ```bash
 # On Mac/Linux:
-sed -i '' 's/YOUR-USERNAME/your-actual-username/g' README.md
-sed -i '' 's/YOUR-USERNAME/your-actual-username/g' docs/index.md
+sed -i '' 's/tsiitz/your-actual-username/g' README.md
+sed -i '' 's/tsiitz/your-actual-username/g' docs/index.md
 
 # On Linux (no quotes):
-sed -i 's/YOUR-USERNAME/your-actual-username/g' README.md
-sed -i 's/YOUR-USERNAME/your-actual-username/g' docs/index.md
+sed -i 's/tsiitz/your-actual-username/g' README.md
+sed -i 's/tsiitz/your-actual-username/g' docs/index.md
 
 # Then commit and push:
 git add .
@@ -256,7 +256,7 @@ Edit the `LICENSE` file and replace `[Your Name]` with your actual name.
 
 ### Check Your Repository
 
-Visit: `https://github.com/YOUR-USERNAME/kicks-to-python`
+Visit: `https://github.com/tsiitz/kicks-to-python`
 
 You should see:
 - ✅ All files uploaded
@@ -266,7 +266,7 @@ You should see:
 
 ### Check GitHub Pages
 
-Visit: `https://YOUR-USERNAME.github.io/kicks-to-python/`
+Visit: `https://tsiitz.github.io/kicks-to-python/`
 
 You should see:
 - ✅ Nice documentation site with theme
@@ -359,7 +359,7 @@ After completing all steps, verify:
 - [ ] All files uploaded (check on GitHub.com)
 - [ ] README displays correctly on repository page
 - [ ] GitHub Pages enabled (Settings → Pages)
-- [ ] Documentation site accessible at YOUR-USERNAME.github.io/kicks-to-python
+- [ ] Documentation site accessible at tsiitz.github.io/kicks-to-python
 - [ ] URLs updated with your actual username
 - [ ] LICENSE has your name
 - [ ] Repository is Public (for GitHub Pages)
@@ -371,8 +371,8 @@ After completing all steps, verify:
 Your project is now live on GitHub with documentation on GitHub Pages!
 
 **Share your work:**
-- Repository URL: `https://github.com/YOUR-USERNAME/kicks-to-python`
-- Documentation: `https://YOUR-USERNAME.github.io/kicks-to-python/`
+- Repository URL: `https://github.com/tsiitz/kicks-to-python`
+- Documentation: `https://tsiitz.github.io/kicks-to-python/`
 
 **Next steps:**
 - Add screenshots to `docs/images/` folder
