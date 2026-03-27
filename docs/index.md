@@ -37,22 +37,24 @@ python app.py
 
 ### Getting Started
 
-- [**Quick Start Guide**](#quick-start) - Get running in 5 minutes
-- [**Installation**](installation.html) - Detailed setup instructions
-- [**User Guide**](user-guide.html) - How to use the application
+- [**Quick Start Guide**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/README.md#-quick-start) - Get running in 5 minutes
+- [**GitHub Upload Instructions**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/GITHUB_UPLOAD_INSTRUCTIONS.md) - Detailed setup instructions
+- [**Quick Reference**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/QUICK_REFERENCE.md) - Command cheat sheet
 
 ### Conversion Guide
 
-- [**Architecture Overview**](architecture.html) - System design decisions
-- [**Data Migration**](data-migration.html) - VSAM to SQL conversion
-- [**Program Conversion**](program-conversion.html) - COBOL to Python patterns
-- [**Screen Conversion**](screen-conversion.html) - BMS maps to HTML
+- [**Complete Conversion Guide**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/KICKS_TO_PYTHON_CONVERSION_GUIDE.md) - Full 60+ page guide covering all patterns
+  - Architecture decisions
+  - Data migration strategies (VSAM to SQL)
+  - Program conversion patterns (COBOL to Python)
+  - Screen conversion (BMS maps to HTML)
+  - Implementation roadmap
 
 ### Reference
 
-- [**Python API Reference**](api-reference.html) - Code documentation
-- [**COBOL Source**](cobol-reference.html) - Original program documentation
-- [**Conversion Patterns**](patterns.html) - Reusable patterns catalog
+- [**Python Application README**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/README.md) - Application documentation
+- [**COBOL Source Code README**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/cobol-source/README.md) - Original program documentation
+- [**GitHub Repository**](https://github.com/YOUR-USERNAME/kicks-to-python) - View all source code
 
 ---
 
@@ -173,23 +175,24 @@ customer = customer_repo.get_next(key)  # PF8
 
 If you're a CICS programmer looking to understand modern web development:
 
-1. **Start Here:** [CICS to Web Guide](cics-to-web.html) - Concepts mapping
-2. **Then Read:** [Python for COBOL Programmers](python-for-cobol.html)
-3. **Practice With:** The working application
+1. **Start Here:** [Complete Conversion Guide](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/KICKS_TO_PYTHON_CONVERSION_GUIDE.md) - Full CICS to Python patterns
+2. **Then Read:** [Python Application Guide](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/README.md) - Understanding the converted app
+3. **Practice With:** The working application - clone and run `python app.py`
 
 ### For Python Developers
 
 If you're a Python developer working with legacy systems:
 
-1. **Start Here:** [Understanding CICS](understanding-cics.html) - Mainframe concepts
-2. **Then Read:** [VSAM to SQL Guide](vsam-to-sql.html)
-3. **Study:** The COBOL source code
+1. **Start Here:** [Complete Conversion Guide](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/KICKS_TO_PYTHON_CONVERSION_GUIDE.md) - Understand CICS concepts
+2. **Then Read:** [COBOL Source Documentation](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/cobol-source/README.md) - Original COBOL programs
+3. **Study:** Compare COBOL source with Python implementation
 
 ### For Everyone
 
 - [**Complete Conversion Guide**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/KICKS_TO_PYTHON_CONVERSION_GUIDE.md) - 60+ page comprehensive guide
-- [**Code Examples**](examples.html) - Conversion patterns catalog
-- [**FAQ**](faq.html) - Common questions answered
+- [**Python Application README**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/README.md) - Quick start and features
+- [**COBOL Source Documentation**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/cobol-source/README.md) - Original programs reference
+- [**GitHub Upload Guide**](https://github.com/YOUR-USERNAME/kicks-to-python/blob/main/GITHUB_UPLOAD_INSTRUCTIONS.md) - How to upload to GitHub
 
 ---
 
@@ -287,12 +290,10 @@ We welcome contributions! Here's how you can help:
 - Create video tutorials
 
 ### Feedback
-- Report bugs via GitHub Issues
+- Report bugs via [GitHub Issues](https://github.com/YOUR-USERNAME/kicks-to-python/issues)
 - Suggest improvements
 - Share your conversion experiences
-- Ask questions
-
-[**View Contribution Guidelines →**](contributing.html)
+- Ask questions in [Discussions](https://github.com/YOUR-USERNAME/kicks-to-python/discussions)
 
 ---
 
