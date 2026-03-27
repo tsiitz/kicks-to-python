@@ -31,7 +31,7 @@ This directory contains recreated CICS COBOL source code for the sample programs
 ## 🎯 About These Programs
 
 These programs were **recreated based on**:
-1. The Python conversion I created for you
+1. The Python conversion 
 2. Standard CICS/COBOL programming patterns
 3. The KICKS documentation describing the programs
 4. Doug Lowe's book structure and design patterns
