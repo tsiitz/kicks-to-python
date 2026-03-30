@@ -304,8 +304,7 @@ This project is licensed under the MIT License. See the [LICENSE](https://github
 **Attribution:**
 - Original COBOL programs based on examples from "CICS for the COBOL Programmer" by Doug Lowe
 - Published by Mike Murach & Associates, Inc.
-- KICKS for CMS & TSO by Mike Noel - http://www.kicksfortso.com
-- KICKS resources and maintenance by moshix - https://github.com/moshix/kicks
+- KICKS by moshix - https://github.com/moshix/kicks
 
 ---
 
@@ -315,8 +314,7 @@ This project builds upon the excellent work of:
 
 - **Doug Lowe** - Original CICS sample applications
 - **Mike Murach & Associates** - Publisher of the CICS programming book
-- **Mike Noel** - Creator of KICKS for CMS & TSO
-- **moshix** - Active contributor to the mainframe community and KICKS resources
+- **moshix** - Creator of KICKS for TSO/MVS
 - **IBM** - CICS, COBOL, and MVS technologies
 
 ---
@@ -356,8 +354,7 @@ It helps others discover this resource for mainframe modernization.
 - [View Source Code](https://github.com/tsiitz/kicks-to-python)
 
 ### External Links
-- [KICKS for CMS & TSO](http://www.kicksfortso.com) - Mike Noel's KICKS website
-- [KICKS Resources on GitHub](https://github.com/moshix/kicks) - moshix's KICKS repository
+- [KICKS for TSO](https://github.com/moshix/kicks)
 - [Murach's CICS Book](https://www.murach.com/shop/murach-s-cics-for-the-cobol-programmer-detail)
 - [Flask Documentation](https://flask.palletsprojects.com/)
 

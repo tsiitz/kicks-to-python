@@ -24,13 +24,13 @@
             max-width: 960px;
             margin: 0 auto;
             background-color: #000000;
-            border: 2px solid #00ff00;
+            border: 2px solid #00FFFF;  /* Cyan border - matches 3270 screen border */
             padding: 20px;
         }
         
         /* Screen header */
         .screen-header {
-            border-bottom: 1px solid #00ff00;
+            border-bottom: 1px solid #00FFFF;  /* Cyan separator */
             padding-bottom: 10px;
             margin-bottom: 20px;
             display: flex;
@@ -39,11 +39,11 @@
         
         .transaction-id {
             font-weight: bold;
-            color: #00ffff;
+            color: #00FFFF;  /* Cyan for transaction ID */
         }
         
         .screen-title {
-            color: #00ffff;
+            color: #00FFFF;  /* Cyan for screen title */
         }
         
         /* Form styles */
@@ -56,7 +56,7 @@
         label {
             display: inline-block;
             width: 200px;
-            color: #00ff00;
+            color: #00FFFF;  /* Cyan/turquoise for labels - matches 3270 */
             flex-shrink: 0;
         }
         
@@ -64,11 +64,12 @@
         input[type="number"],
         select {
             background-color: #000000;
-            color: #00ff00;
-            border: 1px solid #00ff00;
+            color: #00FF00;  /* Bright green for input fields */
+            border: 1px solid #00FF00;
             padding: 5px 10px;
             font-family: 'Courier New', monospace;
             font-size: 14px;
+            font-weight: bold;  /* Make data stand out */
             flex-grow: 1;
         }
         
@@ -76,7 +77,9 @@
         input[disabled] {
             border: none;
             background-color: transparent;
-            color: #00aa00;
+            color: #00FF00;  /* Bright green for readonly data - matches 3270 highlighted fields */
+            font-weight: bold;  /* Make data stand out more */
+            text-shadow: 0 0 2px #00FF00;  /* Subtle glow effect for readability */
         }
         
         input:focus,
@@ -89,7 +92,7 @@
         .button-group {
             margin-top: 30px;
             padding-top: 20px;
-            border-top: 1px solid #00ff00;
+            border-top: 1px solid #00FFFF;  /* Cyan separator */
         }
         
         button,
@@ -136,9 +139,9 @@
         .screen-footer {
             margin-top: 30px;
             padding-top: 10px;
-            border-top: 1px solid #00ff00;
+            border-top: 1px solid #00FFFF;
             font-size: 12px;
-            color: #00aa00;
+            color: #00FFFF;  /* Cyan for footer text */
         }
         
         /* Data table */
@@ -149,16 +152,18 @@
         }
         
         th {
-            background-color: #003300;
-            color: #00ffff;
+            background-color: #003333;  /* Darker cyan background */
+            color: #00FFFF;  /* Cyan text for headers - matches 3270 */
             padding: 8px;
             text-align: left;
-            border: 1px solid #00ff00;
+            border: 1px solid #00FF00;
+            font-weight: bold;
         }
         
         td {
             padding: 8px;
-            border: 1px solid #00ff00;
+            border: 1px solid #00FF00;
+            color: #00FF00;  /* Bright green for table data */
         }
         
         tr:hover {
@@ -178,7 +183,7 @@
         /* Help text */
         .help-text {
             font-size: 12px;
-            color: #00aa00;
+            color: #00FFFF;  /* Cyan for help text - matches 3270 informational text */
             margin-top: 5px;
         }
         
@@ -194,11 +199,11 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background-color: #003300;
-            color: #00ff00;
+            background-color: #003333;
+            color: #00FFFF;  /* Cyan for status line - matches 3270 */
             padding: 5px 20px;
             font-size: 12px;
-            border-top: 1px solid #00ff00;
+            border-top: 1px solid #00FFFF;
         }
     </style>
     {% block extra_css %}{% endblock %}

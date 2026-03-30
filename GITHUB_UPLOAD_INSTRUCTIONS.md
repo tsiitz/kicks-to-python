@@ -65,7 +65,6 @@ git commit -m "Initial commit: KICKS/COBOL to Python conversion"
 
 ### Step 4: Connect to GitHub
 
-**Replace `tsiitz` with your actual GitHub username:**
 
 ```bash
 # Add remote repository

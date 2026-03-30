@@ -29,9 +29,9 @@ This project includes recreated examples based on:
 - Published by Mike Murach & Associates, Inc.
 - Original CICS sample applications copyright Murach & Associates
 
-KICKS (CICS replacement for CMS & TSO):
-- Created by Mike Noel - http://www.kicksfortso.com
-- Resources and maintenance by moshix - https://github.com/moshix/kicks
+KICKS (CICS replacement for MVS):
+- Created by moshix
+- https://github.com/moshix/kicks
 - See kicks-license.txt for KICKS licensing terms
 
 The conversion methodology, Python implementation, and documentation

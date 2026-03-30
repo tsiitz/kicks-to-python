@@ -9,7 +9,7 @@
 
 This repository demonstrates the full conversion of Doug Lowe's classic CICS sample application suite from KICKS/COBOL running on MVS 3.8J to a modern Python Flask web application with SQLite database.
 
-📚 **[View Documentation Site](https://tsiitz.github.io/kicks-to-python/)**
+📚 **[View Documentation Site](https://tsiitz.github.io/kicks-to-python/)** 
 
 ---
 
@@ -267,8 +267,7 @@ MIT License - See [LICENSE](LICENSE) file for details.
 
 **Attribution:**
 - Original COBOL programs based on examples from "CICS for the COBOL Programmer" by Doug Lowe (Murach & Associates)
-- KICKS for CMS & TSO by Mike Noel - http://www.kicksfortso.com
-- KICKS resources and maintenance by moshix - https://github.com/moshix/kicks
+- KICKS by moshix - https://github.com/moshix/kicks
 
 ---
 
@@ -276,8 +275,7 @@ MIT License - See [LICENSE](LICENSE) file for details.
 
 - **Doug Lowe** - Original CICS sample applications
 - **Mike Murach & Associates** - Publisher of "CICS for the COBOL Programmer"
-- **Mike Noel** - Creator of KICKS for CMS & TSO
-- **moshix** - Active contributor to the mainframe community and KICKS resources
+- **moshix** - KICKS for TSO/MVS
 - **IBM** - CICS, COBOL, MVS technologies
 
 ---

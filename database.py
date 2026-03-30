@@ -395,8 +395,9 @@ class ProductRepository:
 
 def initialize_sample_data():
     """
-    Initialize database with sample data from Murach book examples
-    Equivalent to loading VSAM files with test data
+    Initialize database with actual MVS 3.8J data from LOADMUR1 JCL
+    This is the exact same data loaded into KICKS/CICS on the mainframe
+    Data source: Doug Lowe, CICS for the COBOL Programmer, Part 2, Page 78
     """
     db = Database()
     customer_repo = CustomerRepository(db)
@@ -407,30 +408,46 @@ def initialize_sample_data():
         print("Sample data already exists")
         return
     
-    print("Creating sample data...")
+    print("Loading MVS 3.8J data (from LOADMUR1 JCL)...")
     
-    # Sample customers (from book)
+    # Actual customer data from MVS CUSTMAS file (16 customers)
+    # Data from: LOADMUR1 JCL, lines 73-104
     customers = [
-        Customer(400001, 'Keith', 'Jones', '5841 Oak Leaf Drive', 'Campbell', 'CA', '95008'),
-        Customer(400002, 'Lisa', 'Smith', '3812 Oak Leaf Drive', 'Campbell', 'CA', '95008'),
-        Customer(400003, 'Susan', 'Myers', '4819 Willow Way', 'San Jose', 'CA', '95110'),
-        Customer(400004, 'John', 'Davis', '9201 Pine Street', 'Sunnyvale', 'CA', '94086'),
-        Customer(400005, 'Anne', 'Wright', '1432 Elm Avenue', 'San Jose', 'CA', '95112'),
-        Customer(400006, 'Bob', 'Johnson', '7723 Maple Lane', 'Los Gatos', 'CA', '95030'),
-        Customer(400007, 'Mary', 'Williams', '2901 Cedar Court', 'Santa Clara', 'CA', '95051'),
+        Customer(400001, 'KIETH', 'MCDONALD', '4501 W MOCKINGBIRD', 'DALLAS', 'TX', '75209'),
+        Customer(400002, 'ARREN', 'ANELLI', '40 FORD RD', 'DENVILLE', 'NJ', '07834'),
+        Customer(400003, 'SUSAN', 'HOWARD', '1107 SECOND AVE #312', 'REDWOOD CITY', 'CA', '94063'),
+        Customer(400004, 'CAROLANN', 'EVENS', '74 SUTTON CT', 'GREAT LAKES', 'IL', '60088'),
+        Customer(400005, 'ELAINE', 'ROBERTS', '12914 BRACKNELL', 'CERRITOS', 'CA', '90701'),
+        Customer(400006, 'PAT', 'HONG', '73 HIGH ST', 'SAN FRANCISCO', 'CA', '94114'),
+        Customer(400007, 'PHIL', 'ROACH', '25680 ORCHARD', 'DEARBORN HTS', 'MI', '48125'),
+        Customer(400008, 'TIM', 'JOHNSON', '145 W 27TH ST', 'SO CHICAGO HTS', 'IL', '60411'),
+        Customer(400009, 'MARIANNE', 'BUSBEE', '3920 BERWYN DR #199', 'MOBILE', 'AL', '36608'),
+        Customer(400010, 'ENRIQUE', 'OTHON', 'BOX 26729', 'RICHMOND', 'VA', '23261'),
+        Customer(400011, 'WILLIAM C', 'FERGUSON', 'BOX 1283', 'MIAMI', 'FL', '34002-1283'),
+        Customer(400012, 'S D', 'HEOHN', 'PO BOX 27', 'RIDDLE', 'OR', '97469'),
+        Customer(400013, 'DAVID R', 'KEITH', 'BOX 1266', 'MAGNOLIA', 'AR', '71757-1266'),
+        Customer(400014, 'R', 'BINDER', '3425 WALDEN AVE', 'DEPEW', 'NY', '14043'),
+        Customer(400015, 'VIVIAN', 'GEORGE', '229 S 18TH ST', 'PHILADELPHIA', 'PA', '19103'),
+        Customer(400016, 'J', 'NOETHLICH', '11 KINGSTON CT', 'MERRIMACK', 'NH', '03054'),
     ]
     
     for customer in customers:
         customer_repo.create(customer)
     
-    # Sample products
+    # Actual product data from MVS PRODUCT file (9 products)
+    # Data from: LOADMUR1 JCL, lines 121-129
+    # Note: These are coin/currency denominations used in the Murach examples
     with db.get_connection() as conn:
         products_data = [
-            ('0000000001', 'Widget Standard', 10.50, 500),
-            ('0000000005', 'Gadget Deluxe', 25.99, 250),
-            ('0000000010', 'Doohickey Pro', 99.99, 100),
-            ('0000000020', 'Thingamajig Basic', 5.00, 1000),
-            ('0000000025', 'Whatchamacallit Plus', 15.75, 300),
+            ('0000000001', 'PENNY', 0.01, 10010000),
+            ('0000000005', 'NICKEL', 0.05, 2000),
+            ('0000000010', 'DIME', 0.10, 1000),
+            ('0000000025', 'QUARTER', 0.25, 250),
+            ('0000000100', 'DOLLAR', 1.00, 50),
+            ('0000000500', 'FIVE', 5.00, 20),
+            ('0000001000', 'TEN', 10.00, 20),
+            ('0000002000', 'TWENTY', 20.00, 20),
+            ('0000010000', 'CNOTE', 100.00, 10),
         ]
         
         for prod in products_data:
@@ -439,12 +456,17 @@ def initialize_sample_data():
                 VALUES (?, ?, ?, ?)
             ''', prod)
         
-        # Sample invoices
+        # Actual invoice data from MVS INVOICE file (7 invoices)
+        # Data from: LOADMUR1 JCL, lines 147-181
+        # All dated July 23, 1991 (91-07-23 in original format)
         invoices_data = [
-            (100001, 400001, '2024-01-15', 157.48),
-            (100002, 400001, '2024-02-20', 51.98),
-            (100003, 400002, '2024-01-10', 289.97),
-            (100004, 400003, '2024-03-05', 125.49),
+            (3584, 400015, '1991-07-23', 51.75),    # Vivian George
+            (3585, 400003, '1991-07-23', 292.83),   # Susan Howard
+            (3586, 400007, '1991-07-23', 68.87),    # Phil Roach
+            (3587, 400005, '1991-07-23', 22.09),    # Elaine Roberts
+            (3588, 400004, '1991-07-23', 57.63),    # Carolann Evens
+            (3589, 400016, '1991-07-23', 711.05),   # J Noethlich
+            (3590, 400003, '1991-07-23', 110.49),   # Susan Howard (2nd invoice)
         ]
         
         for inv in invoices_data:
@@ -453,10 +475,10 @@ def initialize_sample_data():
                 VALUES (?, ?, ?, ?)
             ''', inv)
     
-    print("Sample data created successfully!")
-    print(f"Created {len(customers)} customers")
-    print("Created 5 products")
-    print("Created 4 sample invoices")
+    print("MVS 3.8J data loaded successfully!")
+    print(f"Created {len(customers)} customers (400001-400016)")
+    print("Created 9 products (currency denominations)")
+    print("Created 7 invoices (3584-3590, dated 1991-07-23)")
 
 
 if __name__ == '__main__':

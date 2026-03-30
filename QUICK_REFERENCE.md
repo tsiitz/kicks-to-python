@@ -13,7 +13,7 @@ git commit -m "Initial commit: KICKS/COBOL to Python conversion"
 
 # 3. Create repo on GitHub.com (kicks-to-python, Public)
 
-# 4. Connect and push (replace tsiitz)
+# 4. Connect and push 
 git remote add origin https://github.com/tsiitz/kicks-to-python.git
 git push -u origin main
 

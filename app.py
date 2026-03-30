@@ -418,7 +418,11 @@ if __name__ == '__main__':
     print("  INQ2 - Customer inquiry + browse   http://localhost:5000/customer/inquiry2")
     print("  INQ3 - Customer inquiry + invoices http://localhost:5000/customer/inquiry3")
     print("  MNT1 - Customer maintenance        http://localhost:5000/customer/maintenance")
-    print("\nSample customer numbers: 400001, 400002, 400003, 400004, 400005")
+    print("\nSample data from MVS 3.8J (LOADMUR1):")
+    print("  Customers: 400001-400016 (16 customers)")
+    print("  Try: 400001 (KIETH MCDONALD), 400003 (SUSAN HOWARD), 400015 (VIVIAN GEORGE)")
+    print("  Products: 0000000001-0000010000 (9 currency denominations)")
+    print("  Invoices: 3584-3590 (7 invoices from July 23, 1991)")
     print("\nPress Ctrl+C to stop the server")
     print("="*60 + "\n")
     
